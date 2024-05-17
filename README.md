@@ -27,6 +27,7 @@ Below is a breakdown of the key components included in this repository:
   - [`parameters.json`](config/parameters.json): Configuration settings for RAG Model.
 - [**`scripts/`**](scripts/): Additional scripts for utilities.
   - [`fine_tuning.py`](scripts/fine_tuning.py): In progress.
+- [**`.env`**](.env): Set your openai_api_key.
 - [**`requirements.txt`**](requirements.txt): Python dependencies.
 - [**`.gitignore`**](.gitignore): Specifies intentionally untracked files to ignore.
 - [**`README.md`**](README.md): Detailed description of the project.
