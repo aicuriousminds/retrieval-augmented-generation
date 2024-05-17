@@ -24,7 +24,7 @@ Below is a breakdown of the key components included in this repository:
   - [`app.py`](src/app.py): Flask application endpoints.
   - [`rag_model.py`](src/rag_model.py): RAG Model functionality and methods.
 - [**`config/`**](config/): Configuration files.
-  - [`parameters.json`](config/parameters.json): Configuration settings for RAG LLM Model.
+  - [`parameters.json`](config/parameters.json): Configuration settings for RAG Model.
 - [**`scripts/`**](scripts/): Additional scripts for utilities.
   - [`fine_tuning.py`](scripts/fine_tuning.py): In progress.
 - [**`requirements.txt`**](requirements.txt): Python dependencies.
