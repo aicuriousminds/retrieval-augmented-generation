@@ -16,7 +16,7 @@ Recently, OpenAI launched the GPT-4o model, claimed to be the world's most power
 ## :open_file_folder: Components
 Below is a breakdown of the key components included in this repository:
 
-- **`docs/`**: Project documentation.
+- [**`docs/`**](docs/readme.md): Project documentation.
 - [**`tests/`**](tests/readme.md): Test cases documentation.
 - [**`src/`**](src/): Source files for the application.
   - [`__init__.py`](src/__init__.py): Initializes src as a Python module.
