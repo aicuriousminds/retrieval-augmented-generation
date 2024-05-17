@@ -22,14 +22,14 @@ Below is a breakdown of the key components included in this repository:
   - [`main.py`](src/main.py): Main script to run the application.
   - [`app.py`](src/app.py): Flask application endpoints.
   - [`rag_model.py`](src/rag_model.py): RAG Model functionality and methods.
+  - [`.env`](src/.env): Environment file for setting the OpenAI API key.
+  - [`.gitignore`](src/.gitignore): Lists files to be ignored by Git.
 - [**`config/`**](config/): Configuration files.
   - [`parameters.json`](config/parameters.json): Configuration parameters for RAG Model.
 - [**`scripts/`**](scripts/): Additional scripts for utilities.
   - [`fine_tuning.py`](scripts/fine_tuning.py): Script for model fine-tuning (in progress).
 - [**`files/`**](files/): Stores source documents.
 - [**`db/`**](db/): Stores Chroma vector database.
-- [**`.env`**](.env): Environment file for setting the OpenAI API key.
-- [**`.gitignore`**](.gitignore): Lists files to be ignored by Git.
 - [**`requirements.txt`**](requirements.txt): Python dependencies.
 - [**`README.md`**](README.md): Detailed description of the project.
 - [**`LICENSE`**](LICENSE): MIT License information.
