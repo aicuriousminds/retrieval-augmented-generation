@@ -15,5 +15,5 @@
     "key_prompt": "question",
     "files_path": "files/",
     "collection_path": "db/",
-    "collection_name": "rag-llm-model"
+    "collection_name": "rag-model"
 }
