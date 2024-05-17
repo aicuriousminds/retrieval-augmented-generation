@@ -24,7 +24,7 @@ Below is a breakdown of the key components included in this repository:
   - [`__init__.py`](src/__init__.py): Initializes src as a Python module.
   - [`main.py`](src/main.py): Main script to run the application.
   - [`app.py`](src/app.py): Flask application endpoints.
-  - [`rag_llm.py`](src/rag_llm.py): RAG Model functionality and methods.
+  - [`rag_model.py`](src/rag_model.py): RAG Model functionality and methods.
 
 - [**`config/`**](config/): Configuration files.
   - [`parameters.json`](config/parameters.json): Configuration settings for RAG LLM Model.
