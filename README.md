@@ -4,7 +4,6 @@
 - [Components](#open_file_folder-components)<br>
 - [Tools Used](#hammer_and_wrench-tools-used)<br>
 - [Getting Started](#rocket-getting-started)<br>
-<!--- - [References](#books-references)<br> -->
 
 # RAG Model :robot:
 
@@ -24,17 +23,16 @@ Below is a breakdown of the key components included in this repository:
   - [`app.py`](src/app.py): Flask application endpoints.
   - [`rag_model.py`](src/rag_model.py): RAG Model functionality and methods.
 - [**`config/`**](config/): Configuration files.
-  - [`parameters.json`](config/parameters.json): Configuration settings for RAG Model.
+  - [`parameters.json`](config/parameters.json): Configuration parameters for RAG Model.
 - [**`scripts/`**](scripts/): Additional scripts for utilities.
-  - [`fine_tuning.py`](scripts/fine_tuning.py): In progress.
+  - [`fine_tuning.py`](scripts/fine_tuning.py): Script for model fine-tuning (in progress).
 - [**`files/`**](files/): Stores source documents.
-- [**`db/`**](db/): Stores Chroma vector database
-- [**`.env`**](.env): Set openai_api_key.
-- [**`.gitignore`**](.gitignore): Specifies intentionally untracked files to ignore.
+- [**`db/`**](db/): Stores Chroma vector database.
+- [**`.env`**](.env): Environment file for setting the OpenAI API key.
+- [**`.gitignore`**](.gitignore): Lists files to be ignored by Git.
 - [**`requirements.txt`**](requirements.txt): Python dependencies.
 - [**`README.md`**](README.md): Detailed description of the project.
 - [**`LICENSE`**](LICENSE): MIT License information.
-
 
 ## :hammer_and_wrench: Tools Used
 The following tools are utilized in this project:
@@ -71,13 +69,3 @@ pip install -r requirements.txt
 ``` bash
 python src/main.py
 ```
-
-
-<!---
-## :books: References
-[^1]: [x](y)
-[^2]: [x](y)
-[^3]: [x](y)
-[^4]: [x](y)
--->
-
