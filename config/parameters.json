@@ -1,0 +1,19 @@
+{
+    "_comment": "This file contains all the configuration parameters required by the RAG LLM Model. It includes paths and settings required for the RAG LLM Model operations",
+    "host": "localhost",
+    "port": 8080,
+    "llm_model": "gpt-4o",
+    "embedding_model": "text-embedding-3-small",
+    "prompt_template": "\"\"\"<s>[INST] You are a document search assistant, specialized in finding information within the specified files. Follow these instructions: 1. Detect the language of the questions and respond in the same language. 2. Use the provided context elements to answer the questions. 3. Be precise and concise. 4.Deliver your answer in a single sentence. 5. Use emojis to replace words and shorten the response length. [/INST]</s>[INST] {input} Context: {context} Answer: [/INST]\"\"\"",
+    "chunk_size": 128,
+    "chunk_overlap": 10,
+    "search_type":"similarity",
+    "k":5,
+    "score_threshold":0.1,
+    "temperature":0,
+    "key_username": "username",
+    "key_prompt": "question",
+    "files_path": "files/",
+    "collection_path": "db/",
+    "collection_name": "rag-llm-model"
+}
