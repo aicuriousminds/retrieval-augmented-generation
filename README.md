@@ -8,36 +8,28 @@
 
 # RAG Model :robot:
 
-**`Recently, OpenAI GPT-4o model was launched, claimed to be the most powerful model in the world according to various benchmarks. This project evaluates its document search capabilities within a simple Retrieval Augmented Generation (RAG) Model.`**
+**`Retrieval Augmented Generation (RAG) with GPT-4o.`**
 
 ## :mag: Overview
-This project implements a simple RAG Model utilizing the latest and most powerful GPT-4o model. The model interacts with a language model (LLM) to provide answers based on specific documents. The application, built with Flask, offers two endpoints: one for uploading documents (PDF files) and another for executing the model to deliver responses and retrieve generated results. The application runs locally.
+Recently, OpenAI launched the GPT-4o model, claimed to be the world's most powerful according to benchmarks. This project evaluates its document search capabilities within a simple Retrieval Augmented Generation (RAG) Model. The application, built with Flask, uses the GPT-4o model to provide answers based on specific documents.
 
 ## :open_file_folder: Components
 Below is a breakdown of the key components included in this repository:
 
 - [**`docs/`**](docs/readme.md): Project documentation.
-
 - [**`tests/`**](tests/readme.md): Test cases documentation.
-
 - [**`src/`**](src/): Source files for the application.
   - [`__init__.py`](src/__init__.py): Initializes src as a Python module.
   - [`main.py`](src/main.py): Main script to run the application.
   - [`app.py`](src/app.py): Flask application endpoints.
   - [`rag_model.py`](src/rag_model.py): RAG Model functionality and methods.
-
 - [**`config/`**](config/): Configuration files.
   - [`parameters.json`](config/parameters.json): Configuration settings for RAG LLM Model.
-
 - [**`scripts/`**](scripts/): Additional scripts for utilities.
   - [`fine_tuning.py`](scripts/fine_tuning.py): In progress.
-
 - [**`requirements.txt`**](requirements.txt): Python dependencies.
-
 - [**`.gitignore`**](.gitignore): Specifies intentionally untracked files to ignore.
-
 - [**`README.md`**](README.md): Detailed description of the project.
-
 - [**`LICENSE`**](LICENSE): MIT License information.
 
 
@@ -55,7 +47,7 @@ Follow these steps to set up and run the project on your local machine:
 1. **Clone the repository:**
 
 ``` bash
-git clone https://github.com/jairzinhosantos/rag-llm-model.git
+git clone https://github.com/jairzinhosantos/rag-model.git
 ```
 
 3. **Set up a virtual environment:**
