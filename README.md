@@ -28,8 +28,8 @@ Below is a breakdown of the key components included in this repository:
 - [**`scripts/`**](scripts/): Additional scripts for utilities.
   - [`fine_tuning.py`](scripts/fine_tuning.py): In progress.
 - [**`.env`**](.env): Set your openai_api_key.
-- [**`requirements.txt`**](requirements.txt): Python dependencies.
 - [**`.gitignore`**](.gitignore): Specifies intentionally untracked files to ignore.
+- [**`requirements.txt`**](requirements.txt): Python dependencies.
 - [**`README.md`**](README.md): Detailed description of the project.
 - [**`LICENSE`**](LICENSE): MIT License information.
 
