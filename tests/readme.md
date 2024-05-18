@@ -18,7 +18,7 @@
 
 ## :mag: Overview
 
-This guide facilitates testing the RAG Model Application, demonstrating its capability to retrieve model responses from ingested documents.
+This guide facilitates testing the RAG Model Application, demonstrating its ability to retrieve responses from ingested documents. For this test, the well-known paper **`Attention Is All You Need`** was used as the source document, along with the most powerful LLM at the time, **`GPT-4o`**.
 
 ### Endpoints included in this project:
 
