@@ -21,7 +21,7 @@ jobs:
         pip install ruff mypy
 
     - name: Run Ruff
-      run: ruff check retrieval-augmented-generation
+      run: ruff check .
 
     - name: Run MyPy
-      run: mypy retrieval-augmented-generation
+      run: mypy .
