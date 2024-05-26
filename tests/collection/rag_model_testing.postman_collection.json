@@ -1,0 +1,70 @@
+{
+	"info": {
+		"_postman_id": "a04010fd-b3a5-428d-b03b-f2c3a54d8d75",
+		"name": "rag_model_testing",
+		"description": "## 🔍 Overview\n\nThis guide is designed to facilitate the testing of the RAG LLM Model Application, demonstrating its capability to retrieve model responses from specifically ingested documents. The guide details how to use the two provided POST methods for interaction with the RAG LLM Model.\n\n#### Endpoints included in this collection:\n\n- **POST /data_ingestion:** Uploads a document for processing.\n- **POST /rag_llm:** Submits a prompt and retrieves a response based on the ingested document.\n    \n\n## 🛠️ Step-by-Step Testing Guide\n\n### Step 1: Prepare the Environment\n\nEnsure that the necessary directories are available for storing data:\n\n``` bash\nmkdir files\nmkdir db\n\n ```\n\nThese directories will store the source documents (`/files`) and the Chroma vector database (`/db`).\n\n### Step 2: Ingest the Document\n\nUpload the document that the RAG LLM Model will process and use to generate responses:\n\n- **Endpoint:** `POST http://localhost:8080/data_ingestion`\n- **Content-Type:** `multipart/form-data`\n- **Body:**\n    \n\n``` json\n{\n    \"file\": \"<path/to/document.pdf>\"\n}\n\n ```\n\nReplace with the actual file path.\n\n### Step 3: Send a Prompt\n\nSend a prompt to the RAG LLM Model and get the response based on the ingested document. This step involves sending predefined questions in three languages (English, Spanish, Portuguese):\n\n- **Endpoint:** `POST http://localhost:8080/rag_llm`\n- **Content-Type:** `application/json`\n- **Body:**\n    \n\n``` json\n{  \n    \"user_name\": \"Jairzinho Santos\",\n    // english\n    \"question\": \"Who is Zara\"\n    //\"question\": \"What did Emma decide to do?\"\n    //\"question\": \"What is the name of the magical flower?\"\n    // spanish\n    //\"question\": \"¿Quién es Zara?\"\n    //\"question\": \"¿Qué decidió hacer Emma?\"\n    //\"question\": \"¿Cómo se llama la flor mágica?\"\n// portuguese\n//\"question\": \"Quem é Zara?\"\n//\"question\": \"O que Emma decidiu fazer?\"\n//\"question\": \"Qual é o nome da flor mágica?\"\n}\n\n ```\n\nRemember that the model receives one query at a time. Uncomment as needed for testing.\n\n### Step 4: View Responses\n\nAfter sending each request, review the response directly in the Postman response tab to evaluate the model's output.\n\n### Step 5: Modify Request Body (Optional)\n\nAdjust the body data in both POST requests as needed:\n\n- In `/data_ingestion`, attach different document files.\n- In `/rag_llm`, change the \"question\" field to test different queries based on the ingested document.\n    \n\n### Step 6: Update the Variable\n\nThis collection utilizes a `base_url` variable set to [http://localhost:8080](http://localhost:8080). If your application is hosted on a different server or port, update this variable in Post.\n\n### Step 7: Support\n\nFor assistance with testing the RAG LLM Model or if you encounter any issues, please do not hesitate to contact with me: [https://github.com/jairzinhosantos](https://github.com/jairzinhosantos).",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34700330"
+	},
+	"item": [
+		{
+			"name": "Data Ingestion",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/Users/jairzinho/Downloads/challenge-rag-llm/assets/documento.pdf"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/data_ingestion",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"data_ingestion"
+					]
+				},
+				"description": "#### Send a POST Request to Data Ingestion\n\n- **Endpoint:** `POST http://localhost:8080/data_ingestion`\n- **Content-Type:** `multipart/form-data`\n- **Body:**\n    \n\n``` json\n{\n    \"file\": \"<path/to/document.pdf>\"\n}\n\n ```\n\nReplace with the actual file path."
+			},
+			"response": []
+		},
+		{
+			"name": "Model Response",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \n    \"username\": \"Human\",\n    \"question\": \"How you apply what the document proposes?\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/rag_model",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rag_model"
+					]
+				},
+				"description": "#### Send a POST Request to RAG LLM Model\n\n- **Endpoint:** `POST http://localhost:8080/rag_llm`\n- **Content-Type:** `application/json`\n- **Body:**\n    \n\n``` json\n{  \n    \"user_name\": \"Jairzinho Santos\",\n    // english\n    \"question\": \"Who is Zara\"\n    //\"question\": \"What did Emma decide to do?\"\n    //\"question\": \"What is the name of the magical flower?\"\n    \n    // spanish\n    //\"question\": \"¿Quién es Zara?\"\n    //\"question\": \"¿Qué decidió hacer Emma?\"\n    //\"question\": \"¿Cómo se llama la flor mágica?\"\n\n    // portuguese\n    //\"question\": \"Quem é Zara?\"\n    //\"question\": \"O que Emma decidiu fazer?\"\n    //\"question\": \"Qual é o nome da flor mágica?\"\n}\n```\n\nRemember that the model receives one query at a time. Uncomment as needed for testing."
+			},
+			"response": []
+		}
+	]
+}
