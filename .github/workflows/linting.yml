@@ -1,0 +1,27 @@
+name: Linting and Typechecking
+
+on: [push, pull_request]
+
+jobs:
+  lint-and-typecheck:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.12'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install ruff mypy
+
+    - name: Run Ruff
+      run: ruff check retrieval-augmented-generation
+
+    - name: Run MyPy
+      run: mypy retrieval-augmented-generation
