@@ -69,5 +69,3 @@ pip install -r requirements.txt
 ``` bash
 python src/main.py
 ```
-
-/* test */
